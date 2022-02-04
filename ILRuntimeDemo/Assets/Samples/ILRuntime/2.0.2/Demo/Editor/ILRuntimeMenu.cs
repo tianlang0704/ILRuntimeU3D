@@ -7,7 +7,7 @@ using System.Collections.Generic;
 [System.Reflection.Obfuscation(Exclude = true)]
 public class ILRuntimeMenu
 {
-   [MenuItem("ILRuntime/安装VS调试插件")]
+    [MenuItem("ILRuntime/安装VS调试插件")]
     static void InstallDebugger()
     {   
         EditorUtility.OpenWithDefaultApp("Assets/Samples/ILRuntime/2.0.2/Demo/Debugger~/ILRuntimeDebuggerLauncher.vsix");

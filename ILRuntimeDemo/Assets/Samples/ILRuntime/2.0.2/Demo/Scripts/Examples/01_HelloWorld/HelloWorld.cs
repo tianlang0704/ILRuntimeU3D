@@ -2,6 +2,7 @@
 using System.Collections;
 using System.IO;
 using ILRuntime.Runtime.Enviorment;
+using System.Threading;
 //下面这行为了取消使用WWW的警告，Unity2018以后推荐使用UnityWebRequest，处于兼容性考虑Demo依然使用WWW
 #pragma warning disable CS0618
 public class HelloWorld : MonoBehaviour
@@ -77,6 +78,11 @@ public class HelloWorld : MonoBehaviour
 
     void OnHotFixLoaded()
     {
+        appdomain.DebugService.StartDebugService(56000);
+        while (!appdomain.DebugService.IsDebuggerAttached) {
+            Thread.Sleep(10);
+        }
+        Thread.Sleep(1000);
         //HelloWorld，第一次方法调用
         appdomain.Invoke("HotFix_Project.InstanceClass", "StaticFunTest", null, null);
 

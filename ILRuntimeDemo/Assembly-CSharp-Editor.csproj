@@ -46,6 +46,7 @@
      <Compile Include="Assets\Samples\ILRuntime\2.0.2\Demo\Editor\ILRuntimeCLRBinding.cs" />
      <Compile Include="Assets\Samples\ILRuntime\2.0.2\Demo\Editor\ILRuntimeMenu.cs" />
      <Compile Include="Assets\XLua\Editor\ExampleConfig.cs" />
+     <Compile Include="Assets\Scripts\Editor\PrebuildProcessor.cs" />
      <None Include="Assets\XLua\Src\Editor\Template\LuaInterfaceBridge.tpl.txt" />
      <None Include="Assets\XLua\Src\Editor\Template\LuaWrapPusher.tpl.txt" />
      <None Include="Assets\XLua\Src\Editor\Template\LuaDelegateWrap.tpl.txt" />
@@ -701,6 +702,10 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{4cf08ff7-b95e-26ac-4abf-528d5bf75b4b}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mobile.AndroidLogcat.Editor.csproj">
+      <Project>{2937fde9-c85e-6710-811d-c9977f9469c8}</Project>
+      <Name>Unity.Mobile.AndroidLogcat.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

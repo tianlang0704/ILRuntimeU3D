@@ -281,6 +281,7 @@ public static class ExampleConfig
                 new List<string>(){"UnityEngine.Light", "SetLightDirty"},
                 new List<string>(){"UnityEngine.Light", "shadowRadius"},
                 new List<string>(){"UnityEngine.Light", "shadowAngle"},
+                new List<string>(){"UnityEngine.Sprite", "isUsingPlaceholder"},
             };
 
 #if UNITY_2018_1_OR_NEWER

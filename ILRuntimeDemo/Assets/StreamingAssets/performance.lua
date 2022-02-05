@@ -25,8 +25,8 @@ function TestMandelbrot(sb)
 				local workX = 0
 				local workY = 0
 				local counter = 0
-				--while(counter < 255 and MandelbrotCheck(workX, workY))
-				while(counter < 255 and CS.Performance.MandelbrotCheck(workX, workY))				
+				while(counter < 255 and MandelbrotCheck(workX, workY))
+				-- while(counter < 255 and CS.Performance.MandelbrotCheck(workX, workY))				
 				do
 					counter = counter + 1
 					local newX = (workX * workX) - (workY * workY) + coordinateX
@@ -48,6 +48,7 @@ function Test0(sb)
 	local t = os.clock()
 	local go = GameObject("t")
 	local transform = go.transform
+	local pos = transform.position
 	
 	for i = 1, 2000000 do
 		transform.position = transform.position

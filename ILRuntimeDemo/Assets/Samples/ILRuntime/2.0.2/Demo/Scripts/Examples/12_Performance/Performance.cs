@@ -1,4 +1,4 @@
-﻿//#define XLUA_INSTALLED
+﻿#define XLUA_INSTALLED
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -229,5 +229,12 @@ public class Performance : MonoBehaviour
     public static void TestFunc1(int a, string b, Transform d)
     {
         
+    }
+
+    public static void SetPosition(GameObject go, float x, float y, float z)
+    {
+        var pos = go.transform.position;
+        pos.Set(x, y, z);
+        go.transform.position = pos;
     }
 }
